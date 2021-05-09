@@ -74,7 +74,7 @@ with open(file_to_save, "w") as txt_file:
     txt_file.write(election_results)
     
     # Print the candidates vote dictionary.
-    print(candidate_votes)
+    #print(candidate_votes)
 
         #Get the percentage of the votes that each candidate received.
         #First iterate through the candidate_options list
@@ -83,10 +83,13 @@ with open(file_to_save, "w") as txt_file:
         votes = candidate_votes[candidate_name]
         #calculate the percentage of votes (while declaring the variable)
         vote_percentage = float(votes) / float(total_votes) * 100
-        candidate_results = (f"\n{candidate_name}: {vote_percentage:.1f}%({votes:,})\n")
+        candidate_results = (f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
         #  To do: print out each candidate's name, vote count, and percentage of votes to the terminal.
         print(candidate_results)
+
+        # Save the candidate results to our text file.
+        txt_file.write(candidate_results)
 
         # Determine winning vote count and candidate
         
@@ -95,14 +98,21 @@ with open(file_to_save, "w") as txt_file:
         
         # If true then set winning_count = votes and winning_percent = vote_percentage.
             winning_count = votes
-            winning_percentage = vote_percentage
-            
         # And, set the winning_candidate equal to the candidate's name.
             winning_candidate = candidate_name
-
-            winning_candidate_summary = (f"--------------------------------\n"
+            winning_percentage = vote_percentage
+            
+    
+        # Print the winning candidate (to terminal)
+        winning_candidate_summary = (f"--------------------------------\n"
             f"Winner: {winning_candidate}\n"
             f"Winning Vote Count: {winning_count:,}\n"
             f"Winning Percentage: {winning_percentage:.1f}%\n"
             f"-------------------------------\n")
+
+        print(winning_candidate_summary)
+        print(candidate_votes)
+        #txt_file.write(winning_candidate_summary)
+
+       
 
