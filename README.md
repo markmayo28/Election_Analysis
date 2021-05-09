@@ -1,4 +1,4 @@
-# Election_Analysis
+# Colorado Election Analysis
 
 ## Project Overview
 
@@ -59,4 +59,4 @@ The analysis of the county data shows that:
 
 ## Audit Summary
 
-
+The programming script used in this analysis is very versatile and can be adjusted to meet future vote counting needs. The programming script can easily be modified to match with a larger number of counties to include a statewide election. Along the same lines it can also be changed to recognize different candidates and a larger candidate pool. This script will also prove useful to compare election turnout and results across multiple election years. We hope you will find this information meets your needs and will think of us for future projects.
