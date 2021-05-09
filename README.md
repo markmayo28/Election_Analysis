@@ -35,4 +35,10 @@ The analysis of the election show that:
 
 ## Challenge Overview
 
+Colorado Board of Elections asked us to further analyze the election data to determine:
+
+1. The voter turnout for each county
+2. The percentage of votes from each county and of the total count.
+3. The county with the highest turnout.
+
 ## Challenge Summary
