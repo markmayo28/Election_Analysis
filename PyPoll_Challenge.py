@@ -1,6 +1,3 @@
-# -*- coding: UTF-8 -*-
-"""PyPoll Homework Challenge Solution."""
-
 # Add our dependencies.
 import csv
 import os
@@ -9,7 +6,7 @@ import os
 file_to_load = os.path.join("Resources", "election_results.csv")
 
 #Assign a variable to save the file to a path
-file_to_save = os.path.join("Resources", "analysis", "election_analysis.txt")
+file_to_save = os.path.join("analysis", "election_analysis.txt")
 
 # Initialize a total vote counter.
 total_votes = 0
@@ -94,6 +91,7 @@ with open(file_to_save, "w") as txt_file:
         f"--------------------------\n")
     print(election_results, end="")
 
+    # write the final vote count to the txt file
     txt_file.write(election_results)
 
     # 6a: Write a for loop to get the county from the county dictionary.
@@ -126,11 +124,8 @@ with open(file_to_save, "w") as txt_file:
         f"-------------------------\n")
     print(top_county_summary)
 
-    txt_file.write(top_county_summary)
-
-
     # 8: Save the county with the largest turnout to a text file.
-
+    txt_file.write(top_county_summary)
 
     # Save the final candidate vote count to the text file.
     for candidate_name in candidate_votes:
@@ -162,8 +157,8 @@ with open(file_to_save, "w") as txt_file:
         f"Winning Percentage: {winning_percentage:.1f}%\n"
         f"-------------------------\n")
     print(winning_candidate_summary)
-  
-    txt_file.write(winning_candidate_summary)
 
     # Save the winning candidate's name to the text file
-    #txt_file.write(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)
+
+    
